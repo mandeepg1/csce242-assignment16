@@ -31,7 +31,7 @@ let games = [
     publisher: "Sony Interactive Entertainment",
     description: "The console version of Spider-Man 2 is a third-person action-adventure video game, set in an open world based on New York City and composed of Manhattan, Roosevelt Island, Ellis Island, and Liberty Island. Players take on the role of Spider-Man and complete missions—linear scenarios with set objectives—to progress through the story.",
     img: "images/spider-man.jpg",
-    add_info: ["Released in 2018"],
+    add_info: ["Released in 2023"],
   },
   {
     _id: 3,
@@ -40,7 +40,7 @@ let games = [
     publisher: "EA Sports",
     description:"Madden NFL 24 is an American football video game developed by EA Tiburon and published by EA Sports. Based on the National Football League (NFL), it is an installment in the Madden NFL series and follows Madden NFL 23. Buffalo Bills quarterback Josh Allen is the cover athlete for the game.",
     img: "images/madden-24.jpg",
-    add_info: ["Released in 2018"],
+    add_info: ["Released in 2023"],
   },
   {
     _id: 4,
@@ -49,7 +49,7 @@ let games = [
     publisher: "Blizzard Entertainment",
     description:"Overwatch 2 is a 2022 first-person shooter game developed and published by Blizzard Entertainment. As a sequel and replacement to the 2016 hero shooter Overwatch, the game intends a shared environment for player-versus-player (PvP) modes while initially having plans for introducing persistent cooperative modes, though the plans were later scrapped in 2023, focusing the game on its PvP elements.",
     img: "images/ow2.jpg",
-    add_info: ["Released in 2018"],
+    add_info: ["Released in 2016"],
   },
   {
     _id: 5,
@@ -58,7 +58,7 @@ let games = [
     publisher: "Activision",
     description: "Call of Duty: Modern Warfare is a 2019 first-person shooter video game developed by Infinity Ward and published by Activision. Serving as the sixteenth overall installment in the Call of Duty series, as well as a reboot of the Modern Warfare sub-series, it was released on October 25, 2019, for PlayStation 4, Windows, and Xbox One.",
     img: "images/mw2019.jpg",
-    add_info: ["Released in 2018"],
+    add_info: ["Released in 2019"],
   },
   {
     _id: 6,

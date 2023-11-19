@@ -3,22 +3,17 @@ const addGame = async (e) => {
     e.preventDefault();
     const form = document.getElementById("add-edit-game-form");
     const formData = new FormData(form);
-
     formData.append("platform", getGameInfo());
-
     let response;
 
     try {
-        // Check if it's an edit or add based on _id value
         if (form._id.value && form._id.value !== "-1") {
             response = await fetch(`/api/games/${form._id.value}`, {
                 method: "PUT",
                 body: formData,
             });
         } else {
-            // Form is for adding a new game
             formData.delete("_id");
-
             response = await fetch("/api/games", {
                 method: "POST",
                 body: formData,
@@ -32,12 +27,12 @@ const addGame = async (e) => {
         const data = await response.json();
         console.log("Data from server:", data);
 
-        // Update the local data with the received data
+        
         const updatedGameIndex = games.findIndex((g) => g._id === data._id);
         if (updatedGameIndex !== -1) {
             games[updatedGameIndex] = data;
             console.log("Games Array Updated:", games);
-            showGames(); // Trigger a rerender
+            showGames();
         }
 
     } catch (error) {
@@ -47,9 +42,6 @@ const addGame = async (e) => {
     document.querySelector(".form-class").classList.add("transparent");
     showGames();
 };
-
-
-
 
   
   const getGameInfo = () => {
@@ -167,9 +159,6 @@ const addGame = async (e) => {
 };
 
 
-
-
-
 const populateInfo = (game) => {
     const section = document.getElementById("game-boxes");
 
@@ -189,7 +178,6 @@ const addEditGame = async(e) => {
     let response;
     formData.append("infos", getGameInfo());
 
-    //trying to add a new recipe
     if (form._id.value == -1) {
         formData.delete("_id");
 
@@ -198,7 +186,6 @@ const addEditGame = async(e) => {
             body: formData
         });
     }
-    //edit an existing recipe
     else {
 
         console.log(...formData);
@@ -209,7 +196,6 @@ const addEditGame = async(e) => {
         });
     }
 
-    //successfully got data from server
     if (response.status != 200) {
         console.log("Error posting data");
     }
